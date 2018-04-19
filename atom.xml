@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dengyaohui.com/"/>
-  <updated>2018-03-29T06:08:10.837Z</updated>
+  <updated>2018-04-19T05:12:09.697Z</updated>
   <id>http://dengyaohui.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://dengyaohui.com/2018/04/19/today/"/>
+    <id>http://dengyaohui.com/2018/04/19/today/</id>
+    <published>2018-04-19T05:11:51.784Z</published>
+    <updated>2018-04-19T05:12:09.697Z</updated>
+    
+    <content type="html"><![CDATA[<p>###<br>– 今天是个好日子</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###&lt;br&gt;– 今天是个好日子&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>NodeJS案例</title>
