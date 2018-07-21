@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dengyaohui.com/"/>
-  <updated>2018-07-12T10:05:58.979Z</updated>
+  <updated>2018-07-21T01:16:46.005Z</updated>
   <id>http://dengyaohui.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>7彩炫酷样式</title>
+    <link href="http://dengyaohui.com/2018/07/21/7%E5%BD%A9%E7%82%AB%E9%85%B7%E6%A0%B7%E5%BC%8F/"/>
+    <id>http://dengyaohui.com/2018/07/21/7彩炫酷样式/</id>
+    <published>2018-07-21T01:06:32.000Z</published>
+    <updated>2018-07-21T01:16:46.005Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="colorful-样式"><a href="#colorful-样式" class="headerlink" title="colorful 样式"></a>colorful 样式</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.colorful</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#E16132</span>;</span><br><span class="line"><span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line"><span class="attribute">text-decoration</span>: none;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">3px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">supports</span> (-webkit-transform: scale(<span class="number">0</span>)) &#123;</span><br><span class="line"><span class="selector-class">.colorful</span> &#123;</span><br><span class="line"><span class="comment">/*-webkit-mask-image: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);*/</span></span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to right, red, orange, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);</span><br><span class="line">    <span class="attribute">-webkit-background-clip</span>: text;</span><br><span class="line">    <span class="attribute">-webkit-text-fill-color</span>: transparent;</span><br><span class="line">    <span class="attribute">-webkit-background-size</span>: <span class="number">200%</span> <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">animation</span>: bgp <span class="number">5s</span> infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> bgp &#123;</span><br><span class="line">    0%  &#123; <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;&#125;</span><br><span class="line">    100% &#123; <span class="attribute">background-position</span>: -<span class="number">100%</span> <span class="number">0</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>&lt;style&gt;    .colorful a {        color: #E16132;        margin-right: 5px;        text-decoration: none;        padding: 3px 0;    }    @supports (-webkit-transform: scale(0)) {        .colorful {            /*-webkit-mask-image: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);*/            background-image: linear-gradient(to right, red, orange, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);            -webkit-background-clip: text;            -webkit-text-fill-color: transparent;            -webkit-background-size: 200% 100%;            animation: bgp 5s infinite linear;        }    }    @-webkit-keyframes bgp {        0%  { background-position: 0 0;}        100% { background-position: -100% 0;}    }&lt;/style&gt;&lt;div class=&quot;colorful&quot;&gt;    &lt;a href=&quot;#&quot;&gt;aaa&lt;/a&gt;    &lt;a href=&quot;#&quot;&gt;bbb&lt;/a&gt;    &lt;a href=&quot;#&quot;&gt;ccc&lt;/a&gt;    &lt;a href=&quot;#&quot;&gt;ddd&lt;/a&gt;    &lt;a href=&quot;#&quot;&gt;fff&lt;/a&gt;    &lt;a href=&quot;#&quot;&gt;eee&lt;/a&gt;&lt;/div&gt;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;colorful-样式&quot;&gt;&lt;a href=&quot;#colorful-样式&quot; class=&quot;headerlink&quot; title=&quot;colorful 样式&quot;&gt;&lt;/a&gt;colorful 样式&lt;/h1&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML基础</title>
+    <link href="http://dengyaohui.com/2018/07/21/HTML%E5%9F%BA%E7%A1%80/"/>
+    <id>http://dengyaohui.com/2018/07/21/HTML基础/</id>
+    <published>2018-07-21T00:51:52.000Z</published>
+    <updated>2018-07-21T00:51:52.855Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Markdown语法手册</title>
