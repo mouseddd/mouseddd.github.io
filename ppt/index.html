@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>第一节课</title>
+	<link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/moon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="reveal">
+        <div class="slides">
+            <section data-transition="fade" data-background-image="image/banner.jpg" data-background-size="100%">
+                <h1>开学第一课</h1>
+                <h2 class="fragment">欢迎来到我们的音乐课堂</h2>
+            </section>
+            <section data-background-image="image/1.jpg" data-background-color="rgba(255,255,255,0.8)">
+                <h2>自我介绍</h2>
+                <p class="fragment">今天是我们的第一节课，上课前我想请同学们先认识我一下</p>
+                <p class="fragment">大家好，我是你们的音乐老师，我的名字是文棋</p>
+                <p class="fragment">我喜欢和同学们一起欣赏美妙的音乐，用音乐把我们大家联系在一起，一起体会音乐带给我们的感动</p>
+                <p class="fragment">我坚信音乐教育不是对音乐家的教育，而是对每个学生的教育</p>
+                <p class="fragment">希望在以后的日子里，我和同学们可以在音乐中成长，音乐中展望</p>
+            </section>
+            <section data-transition="zoom"  data-background-image="image/2.jpg">
+	            <h2>课堂纪律</h2>
+                <p class="fragment">
+                    <span class="fragment"> 1、坐立姿势要端正</span>
+                    <span class="fragment"> 2、课本摆放要整齐</span>
+                </p>
+                <p class="fragment">
+                    <span class="fragment"> 3、课堂表演要自信</span>
+                    <span class="fragment"> 4、最佳课堂会加分</span>
+                </p>
+                <p class="fragment">
+                    <span class="fragment"> 5、歌唱姿势要自然</span>
+                    <span class="fragment"> 6、老师讲课认真听</span>
+                </p>
+                <p class="fragment">
+                    <span class="fragment"> 7、同学表演要鼓励</span>
+                    <span class="fragment"> 8、个性特长要苦练</span>
+                </p>
+        	</section>
+        	<section data-background-image="image/3.jpg">
+	            <h2 style="text-align: center;">请同学们介绍一下自己</h2>
+        	</section>
+            <section data-background-image="image/4.jpg">
+                <h2 style="text-align: center;">评选文艺委员</h2>
+            </section>
+            <section data-background-image="image/5.jpg">
+                <h2 style="text-align: center;">欣赏歌曲</h2>
+                <audio src="music/mangzhong.mp3" controls="controls">
+                </audio>
+            </section>
+        </div>
+    </div>
+<script src="js/reveal.js"></script>
+<script>
+    Reveal.initialize({
+	// 是否在右下角展示控制条
+	controls: false,
+	// 是否显示演示的进度条
+    progress: true,
+
+    // 是否显示当前幻灯片的页数
+    slideNumber: 'c/t',
+
+    // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    history: false,
+
+    // 是否启用键盘快捷键来导航
+    keyboard: true,
+
+    // 是否启用幻灯片的概览模式,开启后，可以使用ESC键查看幻灯片概览
+    overview: true,
+
+    // 是否将幻灯片垂直居中
+    center: true,
+
+    // 是否在触屏设备上启用触摸导航
+    touch: true,
+
+    // 是否循环演示
+    loop: false,
+
+    // 是否将演示的方向变成 RTL(反向)
+    rtl: false,
+
+    // 全局开启和关闭碎片
+    fragments: true,
+
+    // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+    embedded: false,
+
+    // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+    help: true,
+
+    //  两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    autoSlide: 0,
+
+    // 当遇到用户输入的时候停止切换
+    autoSlideStoppable: true,
+
+    // 是否启用通过鼠标滚轮来导航幻灯片
+    mouseWheel: true,
+
+    //  是否在移动设备上隐藏地址栏
+    hideAddressBar: true,
+
+    // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+    previewLinks: false,
+
+    // 切换过渡效果
+    transition: 'default', // none/fade/slide/convex/concave/zoom
+
+    // 过渡速度
+    transitionSpeed: 'default', // default/fast/slow
+
+    // 全屏幻灯片背景的过渡效果
+    backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+    // 除当前可见的之外的幻灯片数量
+    viewDistance: 3,
+
+    // 视差背景图片
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // 视差背景尺寸
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+    // 移动视差背景（水平和垂直）滑动变化的数量, 例如100
+    parallaxBackgroundHorizontal: '',
+    parallaxBackgroundVertical: ''
+});
+</script>
+</body>
+</html>
