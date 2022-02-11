@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>冰墩墩</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+    }
+    #canvas {
+      margin: 0 auto;
+      display: block;
+      border: 1px solid #eeeeee;
+    }
+    .button_box {
+      display: inline-flex;
+      position:absolute;
+      right:30%;
+      top:50px;
+    }
+  </style>
+  <link rel="stylesheet" href="./button.css">
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+<!--   <div class="button_box">
+  <a href="#" class="button button-glow button-rounded button-raised button-primary" id="abt" onclick="adddraw ()">点击即可绘画</a>
+</div> -->
+  <script>
+    const canvasEle = document.getElementById('canvas')
+    const ctx = canvasEle.getContext('2d')
+
+    // 一些常量
+    const BODY_LINE_WIDTH = 10
+    const EYE_FILL_COLOR = '#000000'
+
+    // 画椭圆
+    function drawEllipse(ctxOptions = {}, ellipseOption = {}) {
+      ctx.beginPath()
+      ctx.ellipse(ellipseOption.x, ellipseOption.y, ellipseOption.radiusX, ellipseOption.radiusY, ellipseOption.rotation, ellipseOption.startAngle, ellipseOption.endAngle, ellipseOption.anticlockwise)
+      ctx.strokeStyle = ctxOptions.strokeStyle || '#000000'
+      ctx.lineWidth = ctxOptions.lineWidth || 1
+      ctx.stroke()
+      if (ctxOptions.fillStyle) {
+        ctx.fillStyle = ctxOptions.fillStyle
+        ctx.fill()
+      }
+    }
+
+    // 画圆
+    function drawCircle(ctxOptions = {}, circleOption = {}) {
+      ctx.beginPath()
+      ctx.arc(circleOption.x, circleOption.y, circleOption.radius, circleOption.startAngle, circleOption.endAngle, circleOption.anticlockwise)
+      ctx.strokeStyle = ctxOptions.strokeStyle || '#000000'
+      ctx.lineWidth = ctxOptions.lineWidth || 1
+      ctx.stroke()
+      if (ctxOptions.fillStyle) {
+        ctx.fillStyle = ctxOptions.fillStyle
+        ctx.fill()
+      }
+    }
+
+    // 画身体的两个椭圆
+    drawEllipse(
+      {
+        lineWidth: BODY_LINE_WIDTH,
+      },
+      {
+        x: 320,
+        y: 300,
+        radiusX: 180,
+        radiusY: 200,
+        rotation: 0,
+        startAngle: 0,
+        endAngle: 2 * Math.PI,
+        anticlockwise: false,
+      }
+    )
+
+    drawEllipse({
+      lineWidth: BODY_LINE_WIDTH,
+    }, {
+      x: 320,
+      y: 250,
+      radiusX: 130,
+      radiusY: 90,
+      rotation: 0,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+
+    // 画彩虹
+    drawEllipse({
+      strokeStyle: 'rgb(0, 183, 222)',
+      lineWidth: 5
+    }, {
+      x: 320,
+      y: 250,
+      radiusX: 135,
+      radiusY: 95,
+      rotation: 0,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawEllipse({
+      strokeStyle: 'rgb(221, 108, 155)',
+      lineWidth: 5
+    }, {
+      x: 320,
+      y: 250,
+      radiusX: 140,
+      radiusY: 100,
+      rotation: 0,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawEllipse({
+      strokeStyle: 'rgb(223, 192, 79)',
+      lineWidth: 5
+    }, {
+      x: 320,
+      y: 250,
+      radiusX: 145,
+      radiusY: 105,
+      rotation: 0,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawEllipse({
+      strokeStyle: 'rgb(148, 204, 95)',
+      lineWidth: 5
+    }, {
+      x: 320,
+      y: 250,
+      radiusX: 150,
+      radiusY: 110,
+      rotation: 0,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+
+    // 画眼睛
+    drawEllipse({
+      fillStyle: EYE_FILL_COLOR,
+    }, {
+      x: 250,
+      y: 240,
+      radiusX: 50,
+      radiusY: 35,
+      rotation: -70,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawEllipse({
+      fillStyle: EYE_FILL_COLOR
+    }, {
+      x: 390,
+      y: 240,
+      radiusX: 50,
+      radiusY: 35,
+      rotation: 70,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    // 眼珠
+    drawCircle({
+      strokeStyle: '#ffffff',
+      fillStyle: '#ffffff'
+    }, {
+      x: 260,
+      y: 230,
+      radius: 20,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawCircle({
+      strokeStyle: '#ffffff',
+      fillStyle: '#ffffff'
+    }, {
+      x: 380,
+      y: 230,
+      radius: 20,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawCircle({
+      fillStyle: EYE_FILL_COLOR
+    }, {
+      x: 260,
+      y: 230,
+      radius: 16,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawCircle({
+      fillStyle: EYE_FILL_COLOR
+    }, {
+      x: 380,
+      y: 230,
+      radius: 16,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawCircle({
+      strokeStyle: '#ffffff',
+      fillStyle: '#ffffff'
+    }, {
+      x: 267,
+      y: 225,
+      radius: 6,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+    drawCircle({
+      strokeStyle: '#ffffff',
+      fillStyle: '#ffffff'
+    }, {
+      x: 377,
+      y: 225,
+      radius: 6,
+      startAngle: 0,
+      endAngle: 2 * Math.PI,
+      anticlockwise: false,
+    })
+
+    // 鼻子
+    function drawNose() {
+      ctx.beginPath()
+      ctx.moveTo(300, 270)
+      ctx.lineTo(340, 270)
+      ctx.lineTo(320, 290)
+      ctx.lineTo(300, 270)
+      ctx.strokeStyle = '#000000'
+      ctx.lineJoin = 'round'
+      ctx.stroke()
+      ctx.fillStyle = '#000000'
+      ctx.fill()
+    }
+    drawNose() 
+
+    // 嘴巴
+    function drawMouth() {
+      ctx.beginPath()
+      ctx.arc(320, 270, 40, 45 * Math.PI / 180, 135 * Math.PI / 180)
+      ctx.lineWidth = 5
+      ctx.lineCap = 'round'
+      ctx.stroke()
+    }
+    drawMouth()
+
+    // 耳朵
+    function drawLeftEar() {
+      ctx.beginPath()
+      ctx.rotate(-20 * Math.PI / 180)
+      ctx.arc(150, 188, 50, 0, 3 / 4 * Math.PI, true)
+      ctx.fillStyle = '#000000'
+      ctx.fill()
+    }
+    function drawRightEar() {
+      ctx.beginPath();
+      ctx.rotate(10 * Math.PI / 180)
+      ctx.beginPath();
+      ctx.arc(400, 188, 50, (68 * Math.PI / 180), 200 * Math.PI / 180, true);
+      ctx.fill();
+    }
+    drawLeftEar()
+    drawRightEar()
+    // 画手手
+    function drawLeftHand() {
+      ctx.beginPath();
+      ctx.moveTo(85,400);
+      ctx.bezierCurveTo(-20, 500, -80, 360, 92, 300);
+      ctx.stroke();
+      ctx.fillStyle = '#000000';
+      ctx.fill();
+    }
+    function drawRightHand() {
+      ctx.beginPath();
+      ctx.moveTo(442,300);
+      ctx.bezierCurveTo(520, 180, 700, 280, 434, 400);
+      ctx.stroke();
+      ctx.fillStyle = '#000000';
+      ctx.fill();
+    }
+    drawLeftHand()
+    drawRightHand()
+
+    // 画脚
+    function drawLeftFoot() {
+      ctx.beginPath();
+      ctx.moveTo(138,496);
+      ctx.bezierCurveTo(-10, 620, 250, 680, 190, 535);
+      ctx.stroke();
+      ctx.fillStyle = '#000000';
+      ctx.fill();
+    }
+    function drawRightFoot() {
+      ctx.beginPath();
+      ctx.moveTo(270,550);
+      ctx.bezierCurveTo(200, 680, 410, 680, 345, 532);
+      ctx.stroke();
+      ctx.fillStyle = '#000000';
+      ctx.fill();
+    }
+    drawLeftFoot()
+    drawRightFoot()
+
+    // 写文字
+    function drawText(text, x, y, color = '#000000') {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.font = 'bold 30px Arial';
+      ctx.fillText(text, x, y);
+    }
+    drawText('Hi 欣欣 ~', -10, 200)
+    // 加载logo
+    const img = new Image()
+    img.src = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F13781055820%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647081371&t=24409f8591be9c0c50d47183f95b8dcb'
+    
+    // 画图片
+    function drawImg() {
+      img.onload = function () {
+        ctx.beginPath();
+        ctx.restore();
+        ctx.drawImage(img, 200, 420, 100, 100)
+      }
+    }
+    drawImg()
+    // 画爱心
+    function drawHeart() {
+      ctx.save();
+      ctx.beginPath();
+      ctx.scale(0.5,0.5);
+      ctx.translate(960,500);
+      const centerX = 75;
+      const centerY = 40;
+      ctx.moveTo(centerX, centerY);
+      ctx.bezierCurveTo(centerX, 37, 70, 25, 50, 25);
+      ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+      ctx.bezierCurveTo(20, 80, centerY, 102, centerX, 120);
+      ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+      ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+      ctx.bezierCurveTo(85, 25, centerX, 37, centerX, centerY);
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.closePath();
+    }
+    drawHeart()
+    var abt = document.getElementById("abt");
+    function adddraw () {
+      var i = 1;
+      i++ ;
+      if(i=1){
+        console.log(1)
+      }
+    }
+  </script>
+</body>
+</html>
